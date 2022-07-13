@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 }
 
 /**
- * clean_up_program - Frees dynamically allocated memory blocks
+ * clean_mem - Frees dynamically allocated memory blocks
  */
 
 void clean_mem(void)
@@ -67,7 +67,7 @@ void clean_mem(void)
 }
 
 /**
- * exit_program - exits the program
+ * exit_ - exits the program
  * @status: The exit code
  */
 
@@ -84,7 +84,7 @@ void exit_(int status)
 
 char *get_data_mode(void)
 {
-        return (&Data_Format);
+	return (&Data_Format);
 }
 
 /**
@@ -94,5 +94,5 @@ char *get_data_mode(void)
 
 char **get_lines(void)
 {
-        return (Lines);
+	return (Lines);
 }
