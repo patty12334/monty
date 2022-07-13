@@ -23,6 +23,8 @@ instruction_t *get_handlers(void)
 		{"pstr", _pstr},
 		{"rotl", _rotl},
 		{"rotr", _rotr},
+		{"stack", _stack},
+		{"queue", _queue},
 		{NULL, 0},
 	};
 	return (func);
