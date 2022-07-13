@@ -8,11 +8,8 @@
 #include <string.h>
 #include <sys/stat.h>
 
-#ifndef TRUE
 #define TRUE 1
-#ifndef FALSE
 #define FALSE 0
-#endif
 
 
 /**
