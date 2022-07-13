@@ -59,3 +59,80 @@ void _pall(stack_t **stack, unsigned int line_number)
 	}
 	(void)line_number;
 }
+
+/**
+ * mty_op_pint - Prints the value at the top of the stack
+ * @stack: The pointer to the stack of data
+ * @line_number: The current line number
+ */
+
+void _pint(stack_t **stack, unsigned int line_number)
+{
+	char error = TRUE;
+	stack_t *node = NULL;
+
+	if (stack != NULL)
+	{
+		node = get_top_element(stack);
+		if (node != NULL)
+		{
+			printf("%d\n", node->n);
+			error = FALSE;
+		}
+	}
+	if (error)
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
+		exit_(EXIT_FAILURE);
+	}
+}
+
+/**
+ * mty_op_pop - Removes the top element of the stack
+ * @stack: The pointer to the stack of data
+ * @line_number: The current line number
+ */
+
+void op_pop(stack_t **stack, unsigned int line_number)
+{
+	if ((stack != NULL) && (*stack != NULL))
+	{
+		pop(stack);
+	}
+	else
+	{
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
+		exit_(EXIT_FAILURE);
+	}
+}
+
+/**
+ * mty_op_swap - Swaps the top two elements of the stack
+ * @stack: The pointer to the stack of data
+ * @line_number: The current line number
+ */
+
+void _swap(stack_t **stack, unsigned int line_number)
+{
+	char error = TRUE;
+	stack_t *top0 = NULL, *top1 = NULL;
+	int tmp = 0;
+
+	if (stack != NULL && (*stack != NULL))
+	{
+		top0 = get_top_element(stack);
+		top1 = top0->prev;
+		if (top1 != NULL)
+		{
+			tmp = top1->n;
+			top1->n = top0->n;
+			top0->n = tmp;
+			error = FALSE;
+		}
+	}
+	if (error)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		exit_(EXIT_FAILURE);
+	}
+}

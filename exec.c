@@ -10,6 +10,9 @@ instruction_t *get_handlers(void)
 	static instruction_t func[] = {
 		{"push", _push},
 		{"pall", _pall},
+		{"pint", _pint},
+		{"pop", op_pop},
+		{"swap", _swap},
 		{NULL, 0},
 	};
 	return (func);
