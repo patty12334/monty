@@ -76,3 +76,23 @@ void exit_(int status)
 	clean_mem();
 	exit(status);
 }
+
+/**
+ * get_data_mode - Returns a pointer to the interpreter's mode flag
+ * Return: A pointer to the interpreter's mode flag
+ */
+
+char *get_data_mode(void)
+{
+        return (&Data_Format);
+}
+
+/**
+ * get_lines - Retrieves the lines of the current file
+ * Return: The lines of the current file
+ */
+
+char **get_lines(void)
+{
+        return (Lines);
+}
