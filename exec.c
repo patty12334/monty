@@ -13,6 +13,11 @@ instruction_t *get_handlers(void)
 		{"pint", _pint},
 		{"pop", op_pop},
 		{"swap", _swap},
+		{"add", _add},
+		{"nop", _nop},
+		{"sub", _sub},
+		{"div", _div},
+		{"mul", _mul},
 		{NULL, 0},
 	};
 	return (func);

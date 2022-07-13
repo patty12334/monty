@@ -61,7 +61,7 @@ void _pall(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * mty_op_pint - Prints the value at the top of the stack
+ * _pint - Prints the value at the top of the stack
  * @stack: The pointer to the stack of data
  * @line_number: The current line number
  */
@@ -88,7 +88,7 @@ void _pint(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * mty_op_pop - Removes the top element of the stack
+ * op_pop - Removes the top element of the stack
  * @stack: The pointer to the stack of data
  * @line_number: The current line number
  */
@@ -107,7 +107,7 @@ void op_pop(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * mty_op_swap - Swaps the top two elements of the stack
+ * _swap - Swaps the top two elements of the stack
  * @stack: The pointer to the stack of data
  * @line_number: The current line number
  */

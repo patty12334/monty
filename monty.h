@@ -65,6 +65,12 @@ void _pall(stack_t **stack, unsigned int line_number);
 void _pint(stack_t **stack, unsigned int line_number);
 void op_pop(stack_t **stack, unsigned int line_number);
 void _swap(stack_t **stack, unsigned int line_number);
+void _mul(stack_t **stack, unsigned int line_number);
+void _div(stack_t **stack, unsigned int line_number);
+void _sub(stack_t **stack, unsigned int line_number);
+void _nop(stack_t **stack, unsigned int line_number);
+void _add(stack_t **stack, unsigned int line_number);
+
 void push(stack_t **stack, int n);
 int _pop(stack_t **stack);
 void enqueue(stack_t **stack, int n);
