@@ -58,6 +58,8 @@ stack_t *get_top_element(stack_t **stack);
 stack_t *get_bottom_element(stack_t **stack);
 char **read_file(char *path, int *lines_count);
 char *read_word(char *str, int *offset);
-
+char is_whitespace(char c);
+char is_ascii_char(int c);
+char is_integer(char *str);
 
 #endif
