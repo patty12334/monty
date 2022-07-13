@@ -97,7 +97,7 @@ void op_pop(stack_t **stack, unsigned int line_number)
 {
 	if ((stack != NULL) && (*stack != NULL))
 	{
-		pop(stack);
+		_pop(stack);
 	}
 	else
 	{
