@@ -45,6 +45,20 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * enum Date_Format_Modes - The data format modes for this program.
+ * @DF_LIFO: The data format code for a LIFO structure (like a stack)
+ * @DF_FIFO: The data format code for a FIFO structure (like a queue)
+ */
+enum Date_Format_Modes
+{
+	/* The data format code for a LIFO structure (like a stack) */
+	DF_LIFO,
+	/* The data format code for a FIFO structure (like a queue) */
+	DF_FIFO
+};
+
+
 void clean_mem(void);
 void exit_(int status);
 void _execute(char *line, int line_num, stack_t **stack_values);
@@ -60,9 +74,14 @@ char **read_file(char *path, int *lines_count);
 char *read_word(char *str, int *offset);
 char is_whitespace(char c);
 char is_ascii_char(int c);
+char *get_data_mode(void);
+char **get_lines(void);
 char is_integer(char *str);
 char **str_split(char *str, char c, int *len_out, char can_free);
 char *str_cat(char *left, char *right, char can_free);
 int str_len(const char *str);
+void malloc_failure(char failed);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+void mem_set(char *str, int n, char c);
 
 #endif
