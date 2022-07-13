@@ -18,6 +18,11 @@ instruction_t *get_handlers(void)
 		{"sub", _sub},
 		{"div", _div},
 		{"mul", _mul},
+		{"mod", _mod},
+		{"pchar", _pchar},
+		{"pstr", _pstr},
+		{"rotl", _rotl},
+		{"rotr", _rotr},
 		{NULL, 0},
 	};
 	return (func);

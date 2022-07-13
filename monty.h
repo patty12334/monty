@@ -70,7 +70,11 @@ void _div(stack_t **stack, unsigned int line_number);
 void _sub(stack_t **stack, unsigned int line_number);
 void _nop(stack_t **stack, unsigned int line_number);
 void _add(stack_t **stack, unsigned int line_number);
-
+void _rotr(stack_t **stack, unsigned int line_number);
+void _rotl(stack_t **stack, unsigned int line_number);
+void _pstr(stack_t **stack, unsigned int line_number);
+void _pchar(stack_t **stack, unsigned int line_number);
+void _mod(stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, int n);
 int _pop(stack_t **stack);
 void enqueue(stack_t **stack, int n);
