@@ -61,5 +61,8 @@ char *read_word(char *str, int *offset);
 char is_whitespace(char c);
 char is_ascii_char(int c);
 char is_integer(char *str);
+char **str_split(char *str, char c, int *len_out, char can_free);
+char *str_cat(char *left, char *right, char can_free);
+int str_len(const char *str);
 
 #endif
